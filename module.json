@@ -1,7 +1,7 @@
 {
-  "name": "module",
-  "title": "New Module",
-  "description": "",
+  "name": "raise-my-hand",
+  "title": "✋Raise My Hand",
+  "description": "Adds a 'Raise my hand' button that displays a small alert on GM screens that the player would like attention",
   "version": "This is auto replaced",
   "library": "false",
   "manifestPlusVersion": "1.0.0",
@@ -9,22 +9,24 @@
   "compatibleCoreVersion": "0.7.9",
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "Cody Swendrowski",
+      "url": "https://swendrowski.us",
+      "email": "cody@swendrowski.us",
+      "discord": "cswendrowski#9701",
+      "patreon": "ironmoose"
     }
   ],
   "dependencies": [
-
-  ],
-  "conflicts": [
-    
+{
+    "name": "_chatcommands",
+    "type": "module",
+    "manifest": "https://github.com/League-of-Foundry-Developers/Chat-Commands-Lib/releases/download/beta1-1.0.0/module.json"
+}
   ],
   "esmodules": [
     "/scripts/module.js"
   ],
   "scripts": [
-    "/scripts/lib/lib.js"
   ],
   "styles": [
     "/styles/module.css"
@@ -36,7 +38,7 @@
       "path": "languages/en.json"
     }
   ],
-  "url": "https://github.com/<USER>/FoundryVTT-module",
+  "url": "https://github.com/cswendrowski/FoundryVTT-Raise-My-Hand",
   "manifest": "This is auto replaced",
   "download": "This is auto replaced",
   "media": [
