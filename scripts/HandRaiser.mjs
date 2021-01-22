@@ -18,6 +18,11 @@ export default class HandRaiser {
         }
     }
 
+    toggle() {
+        if (this.isRaised) this.lower();
+        else this.raise();
+    }
+
     raise() {
         if (this.isRaised) return;
         this.raiseById(this.userId);
