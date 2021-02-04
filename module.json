@@ -21,7 +21,7 @@
     {
       "name": "_chatcommands",
       "type": "module",
-      "manifest": "https://github.com/League-of-Foundry-Developers/Chat-Commands-Lib/releases/download/beta1-1.0.0/module.json"
+      "manifest": "https://github.com/League-of-Foundry-Developers/Chat-Commands-Lib/releases/download/1.2.0/module.json"
     }
   ],
   "esmodules": [

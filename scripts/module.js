@@ -5,21 +5,47 @@ Hooks.on("chatCommandsReady", function(chatCommands) {
     window.game.handRaiser.handleSocket(recieveMsg);
   });
 
-  chatCommands.registerCommand(chatCommands.createCommand("/raisemyhand", false, (chatlog, messageText, chatdata) => {
-    window.game.handRaiser.raise();
+  chatCommands.registerCommand(chatCommands.createCommandFromData({
+    commandKey: "/raisemyhand",
+    invokeOnCommand: (chatlog, messageText, chatdata) => {
+      window.game.handRaiser.raise();
+    },
+    shouldDisplayToChat: false,
+    iconClass: "fa-hand-paper",
+    description: "Show raised hand indicator"
   }));
 
-  chatCommands.registerCommand(chatCommands.createCommand("/lowermyhand", false, (chatlog, messageText, chatdata) => {
-    window.game.handRaiser.lower();
+  chatCommands.registerCommand(chatCommands.createCommandFromData({
+    commandKey: "/lowermyhand",
+    invokeOnCommand: (chatlog, messageText, chatdata) => {
+      window.game.handRaiser.lower();
+    },
+    shouldDisplayToChat: false,
+    iconClass: "fa-hand-paper",
+    description: "Lower raised hand indicator"
   }));
 
-  chatCommands.registerCommand(chatCommands.createCommand("/rmh", false, (chatlog, messageText, chatdata) => {
-    window.game.handRaiser.raise();
+  chatCommands.registerCommand(chatCommands.createCommandFromData({
+    commandKey: "/rmh",
+    invokeOnCommand: (chatlog, messageText, chatdata) => {
+      window.game.handRaiser.raise();
+    },
+    shouldDisplayToChat: false,
+    iconClass: "fa-hand-paper",
+    description: "Show raised hand indicator"
   }));
 
-  chatCommands.registerCommand(chatCommands.createCommand("/lmh", false, (chatlog, messageText, chatdata) => {
-    window.game.handRaiser.lower();
+  chatCommands.registerCommand(chatCommands.createCommandFromData({
+    commandKey: "/lmh",
+    invokeOnCommand: (chatlog, messageText, chatdata) => {
+      window.game.handRaiser.lower();
+    },
+    shouldDisplayToChat: false,
+    iconClass: "fa-hand-paper",
+    description: "Lower raised hand indicator"
   }));
+
+  
 });
 
 
