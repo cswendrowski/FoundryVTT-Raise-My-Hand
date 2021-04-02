@@ -70,6 +70,21 @@ Hooks.once('ready', function() {
     type: Boolean,
     default: false
   });
+  
+  if (game.modules.get("lib-df-hotkeys")?.active) {
+    Hotkeys.registerGroup({
+      name: moduleName,
+      label: "Raise My Hand"
+    });
+    
+    Hotkeys.registerShortcut({
+      name: `${moduleName}.Toggle`,
+      label: "Raise/Lower My Hand",
+      group: moduleName,
+      default: { key: Hotkeys.keys.KeyR, alt: false, ctrl: false, shift: false },
+      onKeyDown: () => window.game.handRaiser.isRaised ? window.game.handRaiser.lower() : window.game.handRaiser.raise()
+    });
+  }
 });
 
 Hooks.on("getSceneControlButtons", function(controls) {
